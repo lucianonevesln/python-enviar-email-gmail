@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Utilizar essa aplicação caso possua conta no Gmail.</h2>
+    <p>Importante: você precisa ativar a opção de "Acesso a app menos seguro"</p>
+    <p>em configurações de conta do Google.</p><br><br>
+
+    <form action = "{{ url_for('envia_email') }}" method = "POST">
+        <label for="">Assunto: </label><input type="text" placeholder="escreva o assunto..." name="id_assunto" id="id_assunto"><br><br>
+        <label for="">E-mail - Remetente: </label><input type="text" placeholder="e-mail de quem envia..." name="id_email_remetente" id="id_email_remetente"><br><br>
+        <label for="">E-mail - Destinatário: </label><input type="text" placeholder="e-mail de quem recebe..." name="id_email_destinatario" id="id_email_destinatario"><br><br>
+        <label for="">Senha: </label><input type="password" placeholder="senha de acesso..." name="id_senha" id="id_senha"><br><br>
+        <label for="">Mensagem: </label><textarea name="id_mensagem" id="id_mensagem" cols="30" rows="5" placeholder="escreva a mensagem..."></textarea><br><br>
+        <input type="submit" name="retorno" value="Envia E-mail">
+    </form><br>
+
+</body>
+</html>
